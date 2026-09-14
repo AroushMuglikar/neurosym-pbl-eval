@@ -1,1 +1,4 @@
-
+# Checkpoints for neural feature extraction
+# Waiting to see if we have server access before pulling full weights
+video_encoder: "vit-base-patch16-224"
+audio_encoder: "facebook/wav2vec2-base-960h"
