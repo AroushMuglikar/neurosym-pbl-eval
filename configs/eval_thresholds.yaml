@@ -1,1 +1,14 @@
+# Baseline thresholds for neuro-symbolic alignment
+# Values will need serious tuning once we run the SOPHIAS subset
 
+presentation_metrics:
+  min_gaze_retention: 0.65       # target floor for eye-tracking
+  min_speech_fluency: 0.70       # latency threshold for wav2vec
+  
+technical_metrics:
+  min_commit_complexity: 0.60    # static analysis threshold
+  logical_consistency: 0.80      # AST parse pass rate
+
+engine_params:
+  hallucination_penalty: 0.50    # multiplier applied if LLM diverges from bio-signals
+  strict_mode: true              # fail fast if symbolic bounds are breached
