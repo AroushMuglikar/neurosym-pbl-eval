@@ -14,6 +14,8 @@ Currently mapping the architecture to handle ingestion from the SOPHIAS and PE-H
 
 ## Next Steps
 - [x] Dataset audit and pipeline architecture mapped.
-- [ ] Write the actual data ingestion scripts for SOPHIAS PPG/Eye-tracking logs.
-- [ ] Tune the temporal decay factor in the episodic buffer.
-- [ ] Run baseline alignment tests against expert human scoring.
+- [x] Write the actual data ingestion scripts for SOPHIAS PPG/Eye-tracking logs.
+- [x] Tune the temporal decay factor in the episodic buffer.
+- [x] Run baseline alignment tests against expert human scoring.
+
+*Status: Core framework complete. Ready to scale across full computing cluster.*
