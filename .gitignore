@@ -1,1 +1,20 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
 
+# Data and Checkpoints
+data/raw_sophias/
+data/*.csv
+data/*.edf
+data/*.mp4
+*.pt
+*.pth
+*.h5
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
