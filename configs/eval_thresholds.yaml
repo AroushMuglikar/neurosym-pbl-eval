@@ -1,14 +1,24 @@
-# Baseline thresholds for neuro-symbolic alignment
-# Values will need serious tuning once we run the SOPHIAS subset
+# configs/eval_thresholds.yaml
+# Formalized boundaries for Neuro-Symbolic projection
+sophias_individual:
+  construct_a_gaze:
+    h_gaze_min_entropy: 0.28
+    note_fixation_max_ratio: 0.65
+    hard_ceiling_score: 2.0
+  construct_b_cognitive_load:
+    rmssd_z_threshold: -1.50
+    f_pause_min_ratio: 0.12
+    conjunctive_penalty_weight: 0.75
 
-presentation_metrics:
-  min_gaze_retention: 0.65       # target floor for eye-tracking
-  min_speech_fluency: 0.70       # latency threshold for wav2vec
-  
-technical_metrics:
-  min_commit_complexity: 0.60    # static analysis threshold
-  logical_consistency: 0.80      # AST parse pass rate
+pehri_collaborative:
+  construct_c_equity:
+    g_speech_max_gini: 0.72
+    hard_ceiling_score: 2.5
+  construct_d_joint_attention:
+    r_add_del_min: 0.40
+    crq_gaze_min: 0.15
+    hard_ceiling_score: 3.0
 
-engine_params:
-  hallucination_penalty: 0.50    # multiplier applied if LLM diverges from bio-signals
-  strict_mode: true              # fail fast if symbolic bounds are breached
+system:
+  modality_dropout_tolerance: 0.50 # If q_t < 0.5, trigger abstention
+  episodic_window_sec: 10
