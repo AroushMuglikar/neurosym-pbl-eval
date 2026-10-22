@@ -11,11 +11,3 @@ Currently mapping the architecture to handle ingestion from the SOPHIAS and PE-H
 * `src/encoders/` - Neural extraction stubs. Waiting on local data pulls to finish building out the video/audio feature extractors.
 * `src/memory/` - The episodic buffer. Tracks student behavior over temporal windows rather than evaluating stateless snapshots.
 * `src/symbolic/` - The rule engine. If the neural layer says a student's code is great but the commit history complexity is 0, this layer overrides the LLM grade.
-
-## Next Steps
-- [x] Dataset audit and pipeline architecture mapped.
-- [x] Write the actual data ingestion scripts for SOPHIAS PPG/Eye-tracking logs.
-- [x] Tune the temporal decay factor in the episodic buffer.
-- [x] Run baseline alignment tests against expert human scoring.
-
-*Status: Core framework complete. Ready to scale across full computing cluster.*
